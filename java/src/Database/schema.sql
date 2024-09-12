@@ -1,5 +1,6 @@
 BEGIN TRANSACTION;
 
+
 CREATE TABLE nfl_plays_2019 (
                                 play_id SERIAL PRIMARY KEY,
                                 game_id VARCHAR(20),
@@ -1485,6 +1486,7 @@ CREATE TABLE nfl_plays_2022 (
                                 pass_oe INT,
                                 UNIQUE(game_id, play_id)
 );
+
 CREATE TABLE quarterback_stats (
                                    player_id VARCHAR(20) PRIMARY KEY,
                                    player_name VARCHAR(50),
@@ -1539,6 +1541,7 @@ CREATE TABLE receiver_stats (
                                 receiving_yac INT DEFAULT 0,  -- Yards after catch
                                 receiving_targets INT DEFAULT 0
 );
+
 CREATE TABLE tight_end_stats (
                                 player_id VARCHAR(20) PRIMARY KEY,
                                 player_name VARCHAR(50),
