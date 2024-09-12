@@ -1,4 +1,4 @@
-package DatabaseConnection;
+package com.dojo.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
