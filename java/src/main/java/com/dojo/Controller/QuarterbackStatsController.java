@@ -2,7 +2,7 @@ package com.dojo.Controller;
 
 import com.dojo.DAO.QuarterbackStatsDao;
 import com.dojo.Models.QuarterbackStats;
-import com.dojo.Models.QuarterbackStatsResponseDTO;
+import com.dojo.Models.DataTransferObjects.QuarterbackStatsResponseDTO;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

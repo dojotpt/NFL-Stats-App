@@ -1,4 +1,6 @@
-package com.dojo.Models;
+package com.dojo.Models.DataTransferObjects;
+
+import com.dojo.Models.QuarterbackStats;
 
 import java.util.List;
 
