@@ -5,9 +5,39 @@ public class WideReceiverStats {
     private String playerName;
     private String team;
     private int season;
-    private int rushYards;
     private int receptions;
+    private int receivingYards;
+    private int receivingTouchdowns;
+    private int receivingYards20Plus;
+    private int receivingYards40plus;
+    private int receivingYardsLongest;
+    private int firstDowns;
+    private int fumbles;
+    private int receivingYAC;
+    private int targets;
     private int touchdowns;
+
+    public WideReceiverStats(String playerId, String playerName, String team, int season, int receptions,
+                             int receivingYards, int receivingTouchdowns, int receivingYards20Plus, int receivingYards40plus, int receivingYardsLongest, int firstDowns, int fumbles, int receivingYAC, int targets, int touchdowns) {
+        this.playerId = playerId;
+        this.playerName = playerName;
+        this.team = team;
+        this.season = season;
+        this.receptions = receptions;
+        this.receivingYards = receivingYards;
+        this.receivingTouchdowns = receivingTouchdowns;
+        this.receivingYards20Plus = receivingYards20Plus;
+        this.receivingYards40plus = receivingYards40plus;
+        this.receivingYardsLongest = receivingYardsLongest;
+        this.firstDowns = firstDowns;
+        this.fumbles = fumbles;
+        this.receivingYAC = receivingYAC;
+        this.targets = targets;
+        this.touchdowns = touchdowns;
+    }
+
+    public WideReceiverStats() {
+    }
 
     public String getPlayerId() {
         return playerId;
@@ -41,14 +71,6 @@ public class WideReceiverStats {
         this.season = season;
     }
 
-    public int getRushYards() {
-        return rushYards;
-    }
-
-    public void setRushYards(int rushYards) {
-        this.rushYards = rushYards;
-    }
-
     public int getReceptions() {
         return receptions;
     }
@@ -65,13 +87,75 @@ public class WideReceiverStats {
         this.touchdowns = touchdowns;
     }
 
-    public WideReceiverStats(String playerId, String playerName, String team, int season, int rushYards, int receptions, int touchdowns) {
-        this.playerId = playerId;
-        this.playerName = playerName;
-        this.team = team;
-        this.season = season;
-        this.rushYards = rushYards;
-        this.receptions = receptions;
-        this.touchdowns = touchdowns;
+    public int getReceivingYards() {
+        return receivingYards;
+    }
+
+    public void setReceivingYards(int receivingYards) {
+        this.receivingYards = receivingYards;
+    }
+
+    public int getReceivingTouchdowns() {
+        return receivingTouchdowns;
+    }
+
+    public void setReceivingTouchdowns(int receivingTouchdowns) {
+        this.receivingTouchdowns = receivingTouchdowns;
+    }
+
+    public int getReceivingYards20Plus() {
+        return receivingYards20Plus;
+    }
+
+    public void setReceivingYards20Plus(int receivingYards20Plus) {
+        this.receivingYards20Plus = receivingYards20Plus;
+    }
+
+    public int getReceivingYards40plus() {
+        return receivingYards40plus;
+    }
+
+    public void setReceivingYards40plus(int receivingYards40plus) {
+        this.receivingYards40plus = receivingYards40plus;
+    }
+
+    public int getReceivingYardsLongest() {
+        return receivingYardsLongest;
+    }
+
+    public void setReceivingYardsLongest(int receivingYardsLongest) {
+        this.receivingYardsLongest = receivingYardsLongest;
+    }
+
+    public int getFirstDowns() {
+        return firstDowns;
+    }
+
+    public void setFirstDowns(int firstDowns) {
+        this.firstDowns = firstDowns;
+    }
+
+    public int getFumbles() {
+        return fumbles;
+    }
+
+    public void setFumbles(int fumbles) {
+        this.fumbles = fumbles;
+    }
+
+    public int getReceivingYAC() {
+        return receivingYAC;
+    }
+
+    public void setReceivingYAC(int receivingYAC) {
+        this.receivingYAC = receivingYAC;
+    }
+
+    public int getTargets() {
+        return targets;
+    }
+
+    public void setTargets(int targets) {
+        this.targets = targets;
     }
 }

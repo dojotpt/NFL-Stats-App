@@ -19,8 +19,7 @@ public class JdbcQuarterbackStatsDao implements QuarterbackStatsDao {
     @Override
     public List<QuarterbackStats> getQuarterbackStats() {
         final List<QuarterbackStats> quarterbackStats = new ArrayList<>();
-        final String sql = "SELECT player_id, player_name, team, season, pass_yards, pass_attempts, completions, pass_touchdowns, interceptions_thrown, sacks_taken, sack_yards_lost, " +
-                "pass_first_downs, yards_per_attempt, pass_20_plus, pass_40_plus, pass_longest\n" +
+        final String sql = "SELECT player_id, player_name, team, season, pass_yards, pass_attempts, completions, pass_touchdowns, interceptions_thrown, rush_yards, sacks_taken, sack_yards_lost, pass_first_downs, yards_per_attempt, pass_20_plus, pass_40_plus, pass_longest, touchdown\n" +
                 "\tFROM public.quarterback_stats;";
 
         try {
@@ -45,13 +44,15 @@ public class JdbcQuarterbackStatsDao implements QuarterbackStatsDao {
         quarterbackStats.setCompletions(rowSet.getInt("completions"));
         quarterbackStats.setPassTouchdowns(rowSet.getInt("pass_touchdowns"));
         quarterbackStats.setInterceptions(rowSet.getInt("interceptions_thrown"));
+        quarterbackStats.setRushYards(rowSet.getInt("rush_yards"));
         quarterbackStats.setSacksTaken(rowSet.getInt("sacks_taken"));
         quarterbackStats.setSackYardsLost(rowSet.getInt("sack_yards_lost"));
         quarterbackStats.setPassFirstDowns(rowSet.getInt("pass_first_downs"));
-        quarterbackStats.setYardsPerAttempt(rowSet.getInt("yards_per_attempt"));
+        quarterbackStats.setYardsPerAttempt(rowSet.getDouble("yards_per_attempt"));
         quarterbackStats.setPass20PlusYards(rowSet.getInt("pass_20_plus"));
         quarterbackStats.setPass40PlusYards(rowSet.getInt("pass_40_plus"));
         quarterbackStats.setPassLongest(rowSet.getInt("pass_longest"));
+        quarterbackStats.setTouchdowns(rowSet.getInt("touchdown"));
         return quarterbackStats;
     }
 }

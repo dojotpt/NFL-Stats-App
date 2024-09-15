@@ -1499,13 +1499,15 @@ CREATE TABLE quarterback_stats (
                                    completions INT DEFAULT 0,
                                    pass_touchdowns INT DEFAULT 0,
                                    interceptions_thrown INT DEFAULT 0,
+                                   rush_yards INT DEFAULT 0,
                                    sacks_taken INT DEFAULT 0,
                                    sack_yards_lost INT DEFAULT 0,
                                    pass_first_downs INT DEFAULT 0,
-                                   yards_per_attempt FLOAT DEFAULT 0,
+                                   yards_per_attempt DOUBLE PRECISION DEFAULT 0,
                                    pass_20_plus INT DEFAULT 0, -- Passes for 20+ yards
                                    pass_40_plus INT DEFAULT 0, -- Passes for 40+ yards
-                                   pass_longest INT DEFAULT 0   -- Longest pass
+                                   pass_longest INT DEFAULT 0,
+                                    touchdown INT DEFAULT 0
 );
 CREATE TABLE runningback_stats (
                                    player_id VARCHAR(20) PRIMARY KEY,

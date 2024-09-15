@@ -5,8 +5,8 @@ public class QuarterbackStats {
     private String playerName;
     private String team;
     private int season;
-    private int passAttempts;
     private int passYards;
+    private int passAttempts;
     private int completions;
     private int passTouchdowns;
     private int Interceptions;
@@ -14,14 +14,14 @@ public class QuarterbackStats {
     private int sacksTaken;
     private int sackYardsLost;
     private int passFirstDowns;
-    private int yardsPerAttempt;
+    private double yardsPerAttempt;
     private int pass20PlusYards;
     private int pass40PlusYards;
     private int passLongest;
     private int touchdowns;
 
-    public QuarterbackStats(String playerId, String playerName, String team, int season, int passAttempts, int passYards, int completions, int passTouchdowns,
-                            int Interceptions, int rushYards, int sacksTaken, int sackYardsLost, int passFirstDowns, int yardsPerAttempt, int pass20PlusYards,
+    public QuarterbackStats(String playerId, String playerName, String team, int season, int passYards, int passAttempts, int completions, int passTouchdowns,
+                            int Interceptions, int rushYards, int sacksTaken, int sackYardsLost, int passFirstDowns, double yardsPerAttempt, int pass20PlusYards,
                             int pass40PlusYards, int passLongest, int touchdowns) {
         this.playerId = playerId;
         this.playerName = playerName;
@@ -94,11 +94,11 @@ public class QuarterbackStats {
         this.passFirstDowns = passFirstDowns;
     }
 
-    public int getYardsPerAttempt() {
+    public double getYardsPerAttempt() {
         return yardsPerAttempt;
     }
 
-    public void setYardsPerAttempt(int yardsPerAttempt) {
+    public void setYardsPerAttempt(double yardsPerAttempt) {
         this.yardsPerAttempt = yardsPerAttempt;
     }
 
