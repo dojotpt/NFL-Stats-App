@@ -9,6 +9,10 @@ public class TightEndStats {
     private int receptions;
     private int touchdowns;
 
+
+    public TightEndStats() {
+    }
+
     public String getPlayerId() {
         return playerId;
     }

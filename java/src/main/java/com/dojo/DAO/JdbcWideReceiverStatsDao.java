@@ -23,7 +23,7 @@ public class JdbcWideReceiverStatsDao implements WideReceiverStatsDao {
         try {
             final SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
             while (results.next()) {
-                wideReceiverStats.add(mapRowTwoWideReceiverStats(results));
+                wideReceiverStats.add(mapRowToWideReceiverStats(results));
             }
         }catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("unable to connect to server or database");
@@ -31,7 +31,7 @@ public class JdbcWideReceiverStatsDao implements WideReceiverStatsDao {
         return wideReceiverStats;
     }
 
-    WideReceiverStats mapRowTwoWideReceiverStats(SqlRowSet rowSet) {
+    WideReceiverStats mapRowToWideReceiverStats(SqlRowSet rowSet) {
         WideReceiverStats wideReceiverStats = new WideReceiverStats();
         wideReceiverStats.setPlayerId(rowSet.getString("player_id"));
         wideReceiverStats.setPlayerName(rowSet.getString("player_name"));
