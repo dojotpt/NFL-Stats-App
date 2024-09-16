@@ -36,7 +36,23 @@ public JdbcTightEndStatsDao(JdbcTemplate jdbcTemplate) {this.jdbcTemplate = jdbc
 TightEndStats mapRowToTightEndStats(SqlRowSet rowSet) {
     TightEndStats tightEndStats = new TightEndStats();
     tightEndStats.setPlayerId(rowSet.getString("player_id"));
-    return null;
+    tightEndStats.setPlayerName(rowSet.getString("player_name"));
+    tightEndStats.setTeam(rowSet.getString("team"));
+    tightEndStats.setSeason(rowSet.getInt("season"));
+    tightEndStats.setReceptions(rowSet.getInt("receptions"));
+    tightEndStats.setReceivingYards(rowSet.getInt("receiving_yards"));
+    tightEndStats.setTouchdowns(rowSet.getInt("receiving_touchdowns"));
+    tightEndStats.setReceiving20Plus(rowSet.getInt("receiving_20_plus"));
+    tightEndStats.setReceiving40Plus(rowSet.getInt("receiving_40_plus"));
+    tightEndStats.setReceivingLongest(rowSet.getInt("receiving_longest"));
+    tightEndStats.setFirstDowns(rowSet.getInt("receiving_first_downs"));
+    tightEndStats.setFumbles(rowSet.getInt("receving_fumbles"));
+    tightEndStats.setReceivingYAC(rowSet.getInt("receiving_yac"));
+    tightEndStats.setReceivingTargets(rowSet.getInt("receiving_targets"));
+    tightEndStats.setBlockingSnaps(rowSet.getInt("blocking_snaps"));
+    tightEndStats.setBlockingEfficiency(rowSet.getInt("blocking_efficiency"));
+    tightEndStats.setPassProtection(rowSet.getInt("pass_protection"));
+    tightEndStats.setRunBlocking(rowSet.getInt("run_blocking"));
+    return tightEndStats;
 }
-
 }
