@@ -49,10 +49,6 @@ TightEndStats mapRowToTightEndStats(SqlRowSet rowSet) {
     tightEndStats.setFumbles(rowSet.getInt("receving_fumbles"));
     tightEndStats.setReceivingYAC(rowSet.getInt("receiving_yac"));
     tightEndStats.setReceivingTargets(rowSet.getInt("receiving_targets"));
-    tightEndStats.setBlockingSnaps(rowSet.getInt("blocking_snaps"));
-    tightEndStats.setBlockingEfficiency(rowSet.getInt("blocking_efficiency"));
-    tightEndStats.setPassProtection(rowSet.getInt("pass_protection"));
-    tightEndStats.setRunBlocking(rowSet.getInt("run_blocking"));
     return tightEndStats;
 }
 }
