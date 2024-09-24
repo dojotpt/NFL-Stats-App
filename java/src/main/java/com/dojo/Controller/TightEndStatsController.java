@@ -1,6 +1,7 @@
 package com.dojo.Controller;
 
 import com.dojo.DAO.TightEndStatsDao;
+import com.dojo.Models.DataTransferObjects.TightEndStatsResponseDTO;
 import com.dojo.Models.TightEndStats;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
